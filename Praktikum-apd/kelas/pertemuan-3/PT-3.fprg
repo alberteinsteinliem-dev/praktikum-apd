@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="PT 3"/>
+        <attribute name="authors" value="Axioo Pongo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-30 10:19:02 PM"/>
+        <attribute name="created" value="QXhpb28gUG9uZ287UE9OR087MjAyNS0wOS0zMDswOToyMjoxNyBQTTsyNzMy"/>
+        <attribute name="edited" value="QXhpb28gUG9uZ287UE9OR087MjAyNS0wOS0zMDsxMDoxOTowMiBQTTsxOzI4MzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nama, NIM, pilihan, fitur, paket, Password, user" type="String" array="False" size=""/>
+            <declare name="admin, total, biayalangganan" type="Real" array="False" size=""/>
+            <assign variable="user" expression="&quot;Albert Einstein Liem&quot;"/>
+            <assign variable="Password" expression="&quot;2509106095&quot;"/>
+            <assign variable="biayalangganan" expression="1500000"/>
+            <output expression="&quot;login akun anda&quot;" newline="True"/>
+            <output expression="&quot;masukan nama anda&quot;" newline="True"/>
+            <input variable="nama"/>
+            <output expression="&quot;masukan NIM anda&quot;" newline="True"/>
+            <input variable="NIM"/>
+            <if expression="nama == user and NIM == Password">
+                <then>
+                    <output expression="&quot;Login berhasil&quot;" newline="True"/>
+                    <output expression="&quot;biaya setial paket memiliki harga 1500000&quot;" newline="True"/>
+                    <output expression="&quot;1. paket Bronze = akses dasar ke lagu-lagu populer. (biaya admin 1%)&quot;" newline="True"/>
+                    <output expression="&quot;2. paket Silver = akses lagu premium dan playlist kustom.(biaya admin 3%)&quot;" newline="True"/>
+                    <output expression="&quot;3. paket Gold = akses lagu premium, playlist kustom, dan mode offline.(biaya admin 5%)&quot;" newline="True"/>
+                    <output expression="&quot;4. paket Platinum = akses semua fitur, playlist kustom, mode offline, dan konten eksklusif artis.(biaya admin 7%)&quot;" newline="True"/>
+                    <output expression="&quot;silahkan pilih paket anda&quot;" newline="True"/>
+                    <input variable="pilihan"/>
+                    <if expression="&quot;pilihan = 1&quot;">
+                        <then>
+                            <assign variable="admin" expression="0.01"/>
+                            <assign variable="fitur" expression="&quot;Akses dasar ke lagu-lagu populer&quot;"/>
+                            <assign variable="paket" expression="&quot;Bronze&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="&quot;pilihan = 2&quot;">
+                                <then>
+                                    <assign variable="admin" expression="0.03"/>
+                                    <assign variable="paket" expression="&quot;akses lagu premium dan laylist kustom&quot;"/>
+                                    <assign variable="paket" expression="&quot;Silver&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="&quot;pilihan = 3&quot;">
+                                        <then>
+                                            <assign variable="admin" expression="0.05"/>
+                                            <assign variable="fitur" expression="&quot;akses lagu premium, playlist kustom, dan mode offline&quot;"/>
+                                            <assign variable="paket" expression="&quot;Gold&quot;"/>
+                                        </then>
+                                        <else>
+                                            <if expression="&quot;pilihan = 4&quot;">
+                                                <then>
+                                                    <assign variable="admin" expression="0.07"/>
+                                                    <assign variable="fitur" expression="&quot;akses semua fitur, playlist justom, mode offline, konten ekslusif artis&quot;"/>
+                                                    <assign variable="paket" expression="&quot;platinum&quot;"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;pilihan tidak valid&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <assign variable="total" expression="biayalangganan+(biayalangganan*admin)"/>
+                    <output expression="&quot;total pembayaran anda dan rincian&quot;" newline="True"/>
+                    <output expression="&quot;paket &quot; + paket" newline="True"/>
+                    <output expression="&quot;Biaya Paket: Rp &quot; + BiayaLangganan" newline="True"/>
+                    <output expression="&quot;Biaya Admin: &quot; + (BiayaLangganan * Admin)" newline="True"/>
+                    <output expression="&quot;Total Bayar: Rp &quot; + Total" newline="True"/>
+                    <output expression="&quot;terimakasih telah berlangganan&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Gagal masuk akun&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
