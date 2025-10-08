@@ -70,7 +70,7 @@ while login_berhasil:
 
     jumlah = int(jumlah_str)
     if jumlah <= 0:
-        print("Jumlah tiket wajib lebih dani 0")
+        print("Jumlah tiket wajib lebih dari 0")
         continue
 
     total = 0
