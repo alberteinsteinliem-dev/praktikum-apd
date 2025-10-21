@@ -203,7 +203,7 @@ while True:
                             os.system("clear")
                         print("=== DAFTAR KE LOMBA ===")
                         for i, l in enumerate(lomba):
-                            print(f"{i+1}. {l[0]}")
+                            print("Nomor", i+1, ":", l[0])
                         pilihan_lomba = input("Pilih nomor lomba yang kamu minati: ")
                         nomor = int(pilihan_lomba) - 1
                         if nomor >= 0 and nomor < len(lomba):

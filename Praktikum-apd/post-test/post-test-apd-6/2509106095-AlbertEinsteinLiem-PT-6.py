@@ -92,11 +92,11 @@ while True:
                         if angka and nomor != "":
                             nomor = int(nomor)
                             if nomor in lomba:
-                                print("Masukkan data baru (kosongkan jika tidak ingin mengubah):")
-                                nama_baru = input("Nama lomba baru: ")
-                                tanggal_baru = input("Tanggal baru: ")
-                                aturan_baru = input("Peraturan baru: ")
-                                hadiah_baru = input("Hadiah baru: ")
+                                print("Masukkan data lomba baru:")
+                                nama_baru = input("Nama : ")
+                                tanggal_baru = input("Tanggal: ")
+                                aturan_baru = input("Peraturan: ")
+                                hadiah_baru = input("Hadiah: ")
 
                                 if nama_baru: lomba[nomor]["nama"] = nama_baru
                                 if tanggal_baru: lomba[nomor]["tanggal"] = tanggal_baru
@@ -117,7 +117,8 @@ while True:
                         nomor = input("Nomor lomba yang ingin dihapus: ")
                         angka = True
                         for c in nomor:
-                            if c not in "0123456789":
+                            angka = c in "0123456789"
+                            if not angka:
                                 angka = False
                         if angka and nomor != "":
                             nomor = int(nomor)
@@ -173,10 +174,11 @@ while True:
                         print("=== DAFTAR KE LOMBA ===")
                         for i, data in lomba.items():
                            print(i, ".", data["nama"])
-                        nomor = input("Masukkan nomor lomba: ")
+                        nomor = input("Pilih nomor lomba yang kamu minati: ")
                         angka = True
                         for c in nomor:
-                            if c not in "0123456789":
+                            angka = c in "0123456789"
+                            if not angka:
                                 angka = False
                         if angka and nomor != "":
                             nomor = int(nomor)
@@ -219,7 +221,7 @@ while True:
         pw = input("Masukkan password baru: ")
         if nama not in users:
             users[nama] = {"password": pw, "role": "user"}
-            print("Akun berhasil dibuat!")
+            print("Akun sudah dibuat")
         else:
             print("Username sudah digunakan.")
         input("Pencet enter untuk lanjut")
