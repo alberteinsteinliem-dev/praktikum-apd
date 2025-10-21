@@ -1,0 +1,113 @@
+# Membuat set
+# buah = {"apel", "jeruk", "mangga", "apel"} 
+
+# print(buah)
+
+# angka_ganjil = {1, 3, 5, 7, 9}
+# for angka in angka_ganjil:
+#      print(angka)
+
+# angka_ganjil.add(11)
+# print(angka_ganjil)
+
+# angka_ganjil.discard(11)
+# print(angka_ganjil)
+
+# Daftar_buku = {
+#      "Buku1" : "Bumi Manusia",
+#      "Buku2" : "Laut Bercerita",
+#      "Buku3" : "Laut menangis"
+# }
+
+# # print(Daftar_buku["Buku2"])
+# # print(Daftar_buku)
+# for key in Daftar_buku.items():
+#     print(key)
+
+# Biodata = {
+#     "Nama" : "Ananda Daffa Harahap",
+#     "NIM" : 2409106050,
+#     "KRS" : ["Pemrograman Web","Struktur Data","Basis Data"],
+#     "Mahasiswa_Aktif" : True,
+#     "Social Media" : {"Instagram" : "daffahrhap" }
+#     }
+
+# # # print(Biodata["KRS"][1:5])
+
+# # list_nama=dict(mahasiswa1="dapupu")
+
+# print(f"nama saya adalah {Biodata["Nama"]}")
+# print(f"Instagram : {Biodata['Social Media']['Instagram']}")
+# print(f"nama saya adalah {Biodata.get("Nama")}")
+# print(Biodata.get("Nama"))
+
+# Film = { "Avenger Endgame" : "Action",
+#          "Sherlock Holmes" : "Mystery",
+#          "The Conjuring" : "Horror"
+# }
+# #Sebelum Ditambah
+# print(Film)
+# Film["Zombieland"] = "Comedy"
+# Film.update({"Hours" : "Thriller"})
+# #Setelah Ditambah
+# print(Film)
+# #Sebelum Ditambah
+# {'Avenger Endgame': 'Action', 'Sherlock Holmes': 'Mystery',
+# 'The Conjuring': 'Horror'}
+# #Setelah Ditambah
+# {'Avenger Endgame': 'Action', 'Sherlock Holmes': 'Mystery',
+# 'The Conjuring': 'Horror', 'Zombieland': 'Comedy', 'Hours':
+# 'Thriller'}
+
+# #Sebelum Ditambah
+# print(Film)
+# Film["Zombieland"] = "Comedy"
+# Film.update({"Hours" : "Thriller"})
+# #Setelah Ditambah
+# print(Film)
+# #Sebelum Ditambah
+# {'Avenger Endgame': 'Action', 'Sherlock Holmes': 'Mystery',
+# 'The Conjuring': 'Horror'}
+# #Setelah Ditambah
+# {'Avenger Endgame': 'Action', 'Sherlock Holmes': 'Mystery',
+# 'The Conjuring': 'Horror', 'Zombieland': 'Comedy', 'Hours':
+# 'Thriller'}
+# print(data)
+# #memanggil data yang telah dihapus
+# print(data.get("Nama"))
+# {'Nama': 'Daffa', 'Umur': 19, 'Jurusan': 'Informatika'}
+# {'Umur': 19, 'Jurusan': 'Informatika'}
+
+# data = {
+# "Nama" : "Daffa",
+# "Umur" : 19,
+# "Jurusan" : "Informatika"
+# }
+# print("Jumlah Data = ", len(data))
+# Jumlah Data = 3
+
+# buku = {
+# "Buku1" : "Bumi Manusia",
+# "Buku2" : "Laut Bercerita"
+# }
+# pinjam = buku.copy()
+# pinjam["buku2"]="anak semua bangsa"
+# print(“Dictionary yang telah disalin : “, pinjam)
+
+# key = "apel", "jeruk", "mangga, ketupat"
+# value = 1
+# buah = dict.fromkeys(key, value)
+# print(buah)
+# {'apel': 1, 'jeruk': 1, 'mangga': 1}
+
+# Musik = { 
+#     "The Chainsmoker" : ["All we Know", "The Paris"],
+#     "Alan Walker" : ["Alone", "Lily"],
+#     "Neffex" : ["Best of Me", "Memories"]
+# }
+
+# for penyanyi, album in Musik.items():
+#      print(f"Musik milik {penyanyi} adalah : ")
+#      for song in album:
+#          print(song)
+#          print("")
