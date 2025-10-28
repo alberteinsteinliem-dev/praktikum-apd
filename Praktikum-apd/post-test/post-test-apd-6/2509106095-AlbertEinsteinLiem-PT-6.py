@@ -174,7 +174,7 @@ while True:
                         print("=== DAFTAR KE LOMBA ===")
                         for i, data in lomba.items():
                            print(i, ".", data["nama"])
-                        nomor = input("Pilih nomor lomba yang kamu minati: ")
+                        nomor = input("Pilih nomor lomba yang kamu diminati: ")
                         angka = True
                         for c in nomor:
                             angka = c in "0123456789"
